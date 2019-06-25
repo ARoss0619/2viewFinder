@@ -25,15 +25,13 @@ class PostTableTableViewController: UITableViewController {
     func getPhotos() {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             if let coreDataPhotos = try? context.fetch(Photos.fetchRequest()) as? [Photos] {
-                if let unwrappedPhotos = coreDataPhotos {
-                    photos = unwrappedPhotos
-                    tableView.reloadData()
-                }
+                photos = coreDataPhotos
+                tableView.reloadData()
             }
         }
     }
 
-    override func viewWillAppear(_animated: Bool) {
+    override func viewWillAppear( _ _animated: Bool) {
         getPhotos()
     }
     
@@ -49,7 +47,7 @@ class PostTableTableViewController: UITableViewController {
         
         let cellPhoto = photos[indexPath.row]
         
-        cell.textLabel?.text = cellphoto.caption
+        cell.textLabel?.text = cellPhoto.caption
         
         if let cellPhotoImageData = cellPhoto.imageData {
             if let cellPhotoImage = UIImage(data: cellPhotoImageData) {
@@ -74,25 +72,26 @@ class PostTableTableViewController: UITableViewController {
         }
     }
     
-    /*
-    // Override to support conditional editing of the table view.
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+ 
 
-    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                let photoToDelete = photos[indexPath.row]
+                context.delete(photoToDelete)
+            }
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext();getPhotos()
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
+        
     }
-    */
+ 
 
     /*
     // Override to support rearranging the table view.

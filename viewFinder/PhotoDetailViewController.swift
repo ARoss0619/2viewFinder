@@ -22,7 +22,7 @@ class PhotoDetailViewController: UIViewController {
             
             if let cellPhotoImageData = realPhoto.imageData {
                 if let cellPhotoImage = UIImage(data: cellPhotoImageData) {
-                    photoDetail.image = cellPhotoImage
+                    image.image = cellPhotoImage
                 }
             }
         }

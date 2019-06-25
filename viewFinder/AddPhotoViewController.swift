@@ -44,7 +44,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
                 }
             }
         }
-        (UIApplicaton.shared.delegate as? AppDelegate)?.saveContext()
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
         
         navigationController?.popViewController(animated: true)
         
