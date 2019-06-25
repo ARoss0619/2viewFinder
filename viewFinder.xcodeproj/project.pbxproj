@@ -14,6 +14,8 @@
 		1800B4BB22C25EAE0085D90B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1800B4B922C25EAE0085D90B /* LaunchScreen.storyboard */; };
 		1800B4C622C25EAF0085D90B /* viewFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800B4C522C25EAF0085D90B /* viewFinderTests.swift */; };
 		1800B4D122C25EAF0085D90B /* viewFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800B4D022C25EAF0085D90B /* viewFinderUITests.swift */; };
+		1800B4DF22C266860085D90B /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800B4DE22C266860085D90B /* AddPhotoViewController.swift */; };
+		1800B4E122C26F9F0085D90B /* PostTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800B4E022C26F9F0085D90B /* PostTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1800B4CC22C25EAF0085D90B /* viewFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viewFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1800B4D022C25EAF0085D90B /* viewFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewFinderUITests.swift; sourceTree = "<group>"; };
 		1800B4D222C25EAF0085D90B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1800B4DE22C266860085D90B /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		1800B4E022C26F9F0085D90B /* PostTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		1800B4AC22C25EAC0085D90B /* viewFinder */ = {
 			isa = PBXGroup;
 			children = (
+				1800B4E022C26F9F0085D90B /* PostTableTableViewController.swift */,
+				1800B4DE22C266860085D90B /* AddPhotoViewController.swift */,
 				1800B4AD22C25EAC0085D90B /* AppDelegate.swift */,
 				1800B4B122C25EAC0085D90B /* Main.storyboard */,
 				1800B4B722C25EAE0085D90B /* Assets.xcassets */,
@@ -257,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1800B4B622C25EAC0085D90B /* viewFinder.xcdatamodeld in Sources */,
+				1800B4DF22C266860085D90B /* AddPhotoViewController.swift in Sources */,
+				1800B4E122C26F9F0085D90B /* PostTableTableViewController.swift in Sources */,
 				1800B4AE22C25EAC0085D90B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
